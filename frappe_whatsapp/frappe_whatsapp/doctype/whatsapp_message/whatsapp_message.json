@@ -25,7 +25,9 @@
   "content_type",
   "attach",
   "buttons",
+  "header_param",
   "body_param",
+  "footer_param",
   "whatsapp_account",
   "section_break_flow",
   "flow",
@@ -276,12 +278,24 @@
    "fieldtype": "JSON",
    "label": "Product Catalog",
    "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.content_type=='interactive' || doc.content_type=='button'",
+   "fieldname": "header_param",
+   "fieldtype": "Data",
+   "label": "Header Param"
+  },
+  {
+   "depends_on": "eval:doc.content_type=='interactive' || doc.content_type=='button'",
+   "fieldname": "footer_param",
+   "fieldtype": "Data",
+   "label": "Footer Param"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-11 00:34:02.455955",
- "modified_by": "Administrator",
+ "modified": "2026-04-28 14:16:38.827923",
+ "modified_by": "guduguntlasathwik@gmail.com",
  "module": "Frappe Whatsapp",
  "name": "WhatsApp Message",
  "owner": "Administrator",
